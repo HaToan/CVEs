@@ -31,7 +31,7 @@ https://www.starcharge.com/product/artemis/
 true
 
 [Discoverer]
-Ha Toan of VinFast
+Hà Toàn, Tống Thế  Bảo of VinFast
 
 Use CVE-2025-52263.
 
@@ -39,8 +39,7 @@ Use CVE-2025-52263.
 
 
 [Suggested description]
-StarCharge Artemis AC Charger 7-22 kW v1.0.4 was discovered to contain
-a stack overflow via the cgiMain function at download.cgi.
+StarCharge Artemis AC Charger 7–22 kW v1.0.4 contains a stack overflow vulnerability in the cgiMain function of download.cgi, triggered by using the Content-Length value as the buffer size.
 
 [Vulnerability Type]
 Buffer Overflow
@@ -70,16 +69,14 @@ https://www.starcharge.com/product/artemis/
 true
 
 [Discoverer]
-Ha Toan of VinFast
+Hà Toàn, Trần Văn Quắc of VinFast
 
 Use CVE-2025-52264.
 
 ------------------------------------------
 
 [Suggested description]
-A stack overflow in StarCharge Artemis AC Charger 7-22 kW v1.0.4 allows
-attackers to cause a Denial of Service (DoS) via sending a crafted OCPP
-configuration request.
+The CToken::Parse function in webconfig does not impose length restrictions after decrypting a token, allowing an attacker to supply a large payload and trigger a stack overflow.
 
 [Vulnerability Type]
 Buffer Overflow
@@ -116,19 +113,7 @@ Use CVE-2025-52266.
 ------------------------------------------
 
 [Suggested description]
-This vulnerability allows network-adjacent attackers to execute
-arbitrary code on affected devices through the Web Configuration
-interface. Authentication is not required to exploit this
-vulnerability.
-The specific flaw exists within the processing of JSON input handled by
-the Web Configuration module. The vulnerability arises due to a failure
-to properly validate the length of user-supplied data before copying it
-into a fixed-size stack buffer. By sending a specially crafted HTTP
-request containing an oversized JSON field, an attacker can trigger a
-stack-based buffer overflow. This may result in a crash of the service
-and, under certain conditions, lead to arbitrary code execution in the
-context of the affected process   " potentially allowing full device
-compromise.
+The GetName function doesn’t limit the length when parsing a token with the name parameter, allowing an attacker to inject a large payload and cause a stack overflow.  
 
 [Vulnerability Type]
 Buffer Overflow
@@ -204,23 +189,7 @@ Use CVE-2025-52268.
 
 ------------------------------------------
 [Suggested description]
-This vulnerability allows network-adjacent attackers to execute
-arbitrary code on affected devices through the Web Configuration
-interface. Authentication is not required to exploit this
-vulnerability.
-The specific flaw exists within the processing of encrypted tokens in
-the Web Configuration module. The vulnerability is due to insufficient
-validation of the length of user-supplied data during token decryption
-and parsing.
-When handling a specially crafted token, the system copies decrypted
-data into a fixed-size stack buffer without proper bounds checking.
-This can trigger a stack-based buffer overflow, potentially overwriting
-critical control structures on the stack.
-An attacker can exploit this vulnerability by sending a malicious token
-to the configuration endpoint, which could result in a service crash
-or, under specific conditions, arbitrary code execution in the context
-of the affected process   " potentially leading to full device
-compromise.
+The Ocpp_SetOcppBase_send function doesn’t limit the length when parsing a occp config, allowing an attacker to inject a large payload and cause a stack overflowLocation: function Ocpp_SetOcppBase_send in webconfig
 
 [Additional Information]
 https://www.starcharge.com/product/artemis/
