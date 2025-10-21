@@ -75,7 +75,9 @@ Use CVE-2025-52264.
 
 ------------------------------------------
 
-[Suggested description] StarCharge Artemis AC Charger 7-22 kW v1.0.4 was discovered to contain a hardcoded AES key which allows attackers to forge or decrypt valid login tokens. [VulnerabilityType Other] Hard-coded Cryptographic Key
+[Suggested description] StarCharge Artemis AC Charger 7-22 kW v1.0.4 was discovered to contain a hardcoded AES key which allows attackers to forge or decrypt valid login tokens. 
+
+[VulnerabilityType Other] Hard-coded Cryptographic Key
 
 [Vendor of Product] StarCharge
 
