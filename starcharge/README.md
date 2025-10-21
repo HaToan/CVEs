@@ -108,7 +108,7 @@ true
 [Discoverer]
 Ha Toan of VinFast
 
-Use CVE-2025-52266.
+
 
 ------------------------------------------
 
@@ -145,7 +145,7 @@ true
 [Discoverer]
 Ha Toan of VinFast
 
-Use CVE-2025-52265
+
 
 ------------------------------------------
 [Suggested description]
@@ -226,4 +226,3 @@ http://artemis.com
 http://startcharge.com
 https://www.starcharge.com/product/artemis/
 
-Use CVE-2025-52267
